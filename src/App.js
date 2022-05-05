@@ -1,8 +1,9 @@
 import React from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 import { Cryptocurrencies, CryptoDetails, Exchanges, Homepage, Navbar, News } from './components'
 import './App.css'
 import Layout from 'antd/lib/layout/layout'
+import { Space, Typography } from 'antd'
 const App = () => {
   return (
     <BrowserRouter>
@@ -22,9 +23,17 @@ const App = () => {
               </Routes>
             </div>
           </Layout>
+          <div className='footer' >
+              <Typography.Title level={5}  style={{color:'white'}}>
+                Crptoverse <br></br>
+                All Rights Reservered
+              </Typography.Title>
+              <Space>
+              <Link to="/">Home</Link>
+              <Link to="/exchanges">Exchanges</Link>
+              <Link to="/news">News</Link>
+              </Space>
         </div>
-        <div className='footer'>
-
         </div>
       </div>
     </BrowserRouter>
