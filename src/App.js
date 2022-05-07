@@ -4,9 +4,12 @@ import { Cryptocurrencies, CryptoDetails, Exchanges, Homepage, Navbar, News } fr
 import './App.css'
 import Layout from 'antd/lib/layout/layout'
 import { Space, Typography } from 'antd'
+import { Provider } from 'react-redux'
+import store from './app/store'
 const App = () => {
   return (
     <BrowserRouter>
+    <Provider store={store}>
       <div className='app'>
         <div className='navbar'>
           <Navbar />
@@ -36,6 +39,7 @@ const App = () => {
         </div>
         </div>
       </div>
+      </Provider>
     </BrowserRouter>
   )
 }
